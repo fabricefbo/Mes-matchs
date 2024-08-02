@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matchs en Ligne</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #004d99;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #match-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .match-card {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            max-width: 320px;
+            width: 100%;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .match-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .match-card h2 {
+            margin: 0;
+            font-size: 1.4em;
+            color: #004d99;
+            margin-bottom: 10px;
+        }
+
+        .match-card p {
+            margin: 0;
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        .match-card a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #004d99;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .match-card a:hover {
+            background-color: #003d80;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #004d99;
+            color: white;
+            margin-top: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 8px;
+        }
+
+        .social-icons img {
+            width: 28px;
+            height: 28px;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        .note {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: white; /* Texte en blanc */
+        }
+
+        .made-by {
+            margin-top: 40px; /* Ajoute plus d'espace entre la note et "Made by Fbo" */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Suivez les Matchs en Ligne</h1>
+    </header>
+    <main>
+        <section id="match-list">
+            <!-- Les matchs seront affichés ici -->
+        </section>
+    </main>
+    <footer>
+        <div class="note">
+            <p>Note : Les heures indiquées sont en GMT. Les matchs sont diffusés sur Telegram.</p>
+        </div>
+        <div class="made-by">Made by Fbo</div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/fbo_le_sheild/" target="_blank" title="Instagram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const matches = [
+                { time: '16h00', event: 'Montpellier vs Saint-Etienne', link: 'https://t.me/huniliive353?livestream' },
+                { time: '18h00', event: 'OL vs Torino', link: 'https://t.me/huniliive353?livestream' },
+                { time: '00h30', event: 'AC Milan vs Real Madrid', link: 'https://t.me/huniliive353?livestream' }
+            ];
+
+            const matchList = document.getElementById('match-list');
+
+            matches.forEach(match => {
+                const matchCard = document.createElement('div');
+                matchCard.className = 'match-card';
+
+                matchCard.innerHTML = `
+                    <h2>${match.event}</h2>
+                    <p>Heure: ${match.time}</p>
+                    <a href="${match.link}" target="_blank">Regarder en Direct</a>
+                `;
+
+                matchList.appendChild(matchCard);
+            });
+        });
+    </script>
+</body>
+</html>
+
