@@ -38,6 +38,8 @@
             padding: 20px;
             display: flex;
             justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
 
         #match-list {
@@ -45,6 +47,8 @@
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
+            max-width: 800px;
+            width: 100%;
         }
 
         .match-card {
@@ -127,6 +131,14 @@
         .made-by {
             margin-top: 40px;
         }
+        
+        /* Titre des matchs */
+        .match-title {
+            font-size: 1.8em;
+            color: #004d99;
+            text-align: center;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -139,8 +151,35 @@
         <p style="font-size: 0.8em; margin-top: 10px;">Jouez avec modération car les paris sportifs comportent des risques de perte.</p>
     </header>
     <main>
+        <!-- Titre des matchs -->
+        <h2 class="match-title">Matchs du 18/08/2024</h2>
+
+        <!-- Liste des matchs -->
         <section id="match-list">
-            <!-- Les matchs seront affichés ici -->
+            <div class="match-card">
+                <h2>13h00 - Auxerre 🆚 Nice</h2>
+                <a href="https://t.me/hunnilive375?livestream" target="_blank">Regarder en Direct</a>
+            </div>
+            <div class="match-card">
+                <h2>15h00 - Angers 🆚 Lens</h2>
+                <a href="https://t.me/hunnilive375?livestream" target="_blank">Regarder en Direct</a>
+            </div>
+            <div class="match-card">
+                <h2>18h45 - Rennes 🆚 OL</h2>
+                <a href="https://t.me/hunnilive375?livestream" target="_blank">Regarder en Direct</a>
+            </div>
+            <div class="match-card">
+                <h2>17h30 - Chelsea 🆚 Man City</h2>
+                <a href="https://t.me/hunnilive376?livestream" target="_blank">Regarder en Direct</a>
+            </div>
+            <div class="match-card">
+                <h2>19h30 - Mallorca 🆚 Real Madrid</h2>
+                <a href="https://t.me/hunnilive376?livestream" target="_blank">Regarder en Direct</a>
+            </div>
+            <div class="match-card">
+                <h2>15h00 - Montpellier 🆚 Strasbourg</h2>
+                <a href="https://t.me/hunnilive377?livestream" target="_blank">Regarder en Direct</a>
+            </div>
         </section>
     </main>
     <footer>
@@ -157,32 +196,5 @@
             </a>
         </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const matches = [
-                { time: '13h00', event: 'Auxerre 🆚 Nice', link: 'https://t.me/hunnilive375?livestream' },
-                { time: '15h00', event: 'Angers 🆚 Lens', link: 'https://t.me/hunnilive375?livestream' },
-                { time: '18h45', event: 'Rennes 🆚 OL', link: 'https://t.me/hunnilive375?livestream' },
-                { time: '17h30', event: 'Chelsea 🆚 Man City', link: 'https://t.me/hunnilive376?livestream' },
-                { time: '19h30', event: 'Mallorca 🆚 Real Madrid', link: 'https://t.me/hunnilive376?livestream' },
-                { time: '15h00', event: 'Montpellier 🆚 Strasbourg', link: 'https://t.me/hunnilive377?livestream' }
-            ];
-
-            const matchList = document.getElementById('match-list');
-
-            matches.forEach(match => {
-                const matchCard = document.createElement('div');
-                matchCard.className = 'match-card';
-
-                matchCard.innerHTML = `
-                    <h2>${match.event}</h2>
-                    <p>Heure: ${match.time}</p>
-                    <a href="${match.link}" target="_blank">Regarder en Direct</a>
-                `;
-
-                matchList.appendChild(matchCard);
-            });
-        });
-    </script>
 </body>
 </html>
