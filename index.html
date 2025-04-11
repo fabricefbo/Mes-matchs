@@ -1,200 +1,118 @@
-<html><head> <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>FBO SERVICE - Développement Web Créatif</title><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"><link rel="icon" href="image/logo.jpg" type=""><style>
-    :root {
-        --primary-color: #2c3e50;
-        --secondary-color: #3498db;
-        --accent-color: #e74c3c;
-        --text-color: #333;
-        --bg-color: #ecf0f1;
-    }
-    
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        font-family: 'Roboto', sans-serif;
-        line-height: 1.6;
-        color: var(--text-color);
-        background-color: var(--bg-color);
-    }
-    
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-    
-    header {
-        background: var(--primary-color);
-        color: #fff;
-        padding: 20px 0;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-    }
-
-    
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .logo {
-        font-size: 1.5em;
-        font-weight: bold;
-    }
-
-    .logo2 {
-    display: flex;
-    align-items: center;
-}
-
-.logo2-img {
-    height: 50px; /* ajuste la taille selon ton logo */
-    width: auto;
-}
-
-    
-    .nav-links {
-        display: flex;
-        gap: 20px;
-    }
-    
-    .nav-links a {
-        color: #fff;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-    
-    .nav-links a:hover {
-        color: var(--secondary-color);
-    }
-    
-    main {
-        margin-top: 80px;
-    }
-    
-    section {
-        padding: 60px 0;
-    }
-    
-    h1, h2, h3 {
-        margin-bottom: 20px;
-    }
-    
-    .hero {
-        background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80') no-repeat center center/cover;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: #fff;
-    }
-    
-    .hero-content h1 {
-        font-size: 3em;
-        margin-bottom: 20px;
-    }
-    
-    .hero-content p {
-        font-size: 1.2em;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    
-    .btn {
-        display: inline-block;
-        background: var(--secondary-color);
-        color: #fff;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background 0.3s ease;
-    }
-    
-    .btn:hover {
-        background: #2980b9;
-    }
-    
-    .projects {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-    }
-    
-    .project-card {
-        background: #fff;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
-    
-    .project-image {
-        height: 200px;
-        background-size: cover;
-        background-position: center;
-    }
-    
-    .project-content {
-        padding: 20px;
-    }
-    
-    .project-content h3 {
-        color: var(--primary-color);
-    }
-    
-    footer {
-        background: var(--primary-color);
-        color: #fff;
-        text-align: center;
-        padding: 20px 0;
-    }
-    
-    .contact-info {
-        margin-top: 20px;
-    }
-    
-    .contact-info p {
-        margin-bottom: 10px;
-    }
-    
-    .social-link {
-        color: var(--secondary-color);
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-    
-    .social-link:hover {
-        color: var(--accent-color);
-    }
-    
-    @media (max-width: 768px) {
-        .nav-links {
-            display: none;
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matchs en Ligne</title>
+    <style>
+        /* Style du site */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(120deg, #f0f8ff, #e8f4f8);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
-    }
-    .logo {
-    display: flex;
-    align-items: center;
-    margin-left: -65px;
-}
 
-.logo-img {
-    height: 70px; /* ajuste la taille selon ton logo */
-    width: auto;
-}
+        header {
+            background: linear-gradient(90deg, #0066cc, #004d99);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: slideDown 1s ease-out;
+        }
 
-.social-icons img {
+        .promo-codes {
+            margin-top: 10px;
+        }
+
+        .promo-code {
+            background-color: #ffffff;
+            color: #004d99;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 5px 10px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .promo-code:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #match-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .match-card {
+            background: linear-gradient(135deg, #ffffff, #f0f8ff);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 320px;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: transform 0.4s, opacity 0.4s;
+        }
+
+        .match-card h2 {
+            margin: 0;
+            font-size: 1.4em;
+            color: #004d99;
+            margin-bottom: 10px;
+        }
+
+        .match-card p {
+            margin: 0;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .match-card a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #004d99;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .match-card a:hover {
+            background-color: #003d80;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #004d99, #003d80);
+            color: white;
+            margin-top: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-icons img {
             width: 32px;
             height: 32px;
             transition: transform 0.3s;
@@ -204,143 +122,109 @@
             transform: scale(1.2) rotate(10deg);
         }
 
-    </style></head><body>
-        <header>
-            <nav class="container">
-                <div class="logo">
-                    <img src="image/logo.jpg" alt="Logo du site" class="logo-img">
-                    <span style="margin-left: 10px;">FBO SERVICE</span>
-                  </div>
-                  
-                <div class="nav-links">
-                    <a href="#about">À propos</a>
-                    <a href="#projects">Projets</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </nav>
-        </header>
-        
-          
-        <main>
-            <section class="hero">
-                <div class="hero-content container">
-                    <h1>FBO SERVICE</h1>
-                    <p>Développement Web Créatif | Transforme vos idées en réalité digitale</p>
-                    <a href="#contact" class="btn">Nous contacter</a>
-                </div>
-            </section>
-    
-            <section id="about" class="container">
-                <h2>À propos de nous</h2>
-                <p>Chez FBO SERVICE, nous sommes passionnés par le développement web et la création d'expériences digitales innovantes et fonctionnelles. Notre expertise s'étend des applications de trading aux outils de santé, en passant par les sites vitrines d'entreprise. Chaque projet est une nouvelle opportunité de repousser les limites de la créativité et de la technologie.</p>
-            </section>
-    
-            <section id="projects" class="container">
-                <h2>Nos Projets</h2>
-                <div class="projects">
-              <div class="project-card">
-                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80');"></div>
-                    <div class="project-content">
-                        <h3>Eleyca</h3>
-                        <p>Plateforme de petites annonces et vente en ligne</p>
-                        <a href="https://www.eleyca.com/" target="_blank" class="btn">Voir le projet</a>
-                    </div>
-                </div>
-                    <div class="project-card">
-                        <div class="project-image" style="background-image: url('image/imagematch.jpg');"></div>
-                        <div class="project-content">
-                            <h3>Mes Matchs</h3>
-                            <p>Plateforme de diffusion de matchs sportifs en direct.</p>
-                            <a href="https://fabricefbo.github.io/Mes-matchs/" target="_blank" class="btn">Voir le projet</a>
-                       
-                        </div>
-                    </div>
+        .note {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: white;
+        }
 
+        .match-title {
+            font-size: 2em;
+            color: #004d99;
+            text-align: center;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: transform 0.5s, opacity 0.5s;
+        }
 
-                    <div class="project-card">
-                        <div class="project-image" style="background-image: url('image/imagederiv.jpg');"></div>
-                        <div class="project-content">
-                            <h3>Deriv Calculator</h3>
-                            <p>Outil de calcul pour les traders d'indices synthétiques.</p>
-                            <a href="https://derivcalculator.com/" target="_blank" class="btn">Voir le projet</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80');"></div>
-                        <div class="project-content">
-                            <h3>Deriv Watchlist</h3>
-                            <p>Application de gestion de watchlist pour traders.</p>
-                            <a href="https://fabricefbo.github.io/deriv-watchlist/" target="_blank" class="btn">Voir le projet</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image" style="background-image: url('image/imagecycle.jpg');"></div>
-                        <div class="project-content">
-                            <h3>Mon Cycle Menstruel</h3>
-                            <p>Application de suivi des cycles menstruels.</p>
-                            <a href="https://fabricefbo.github.io/mon-cycle-menstruel/" target="_blank" class="btn">Voir le projet</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80');"></div>
-                        <div class="project-content">
-                            <h3>FBO SERVICE</h3>
-                            <p>Site vitrine pour notre société de services web.</p>
-                            <a href="https://fabricefbo.github.io/FBO-SERVICE/" target="_blank" class="btn">Voir le projet</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    
-            <section id="contact" class="container">
-                <h2>Nous Contacter</h2>
-                <p>Vous avez un projet en tête ? N'hésitez pas à nous contacter pour en discuter !</p>
-                <div class="contact-info">
-                    <p>📞 Téléphone : <a href="tel:+22898221274">+228 98 22 12 74</a></p>
-                    <p>📧 Email : <a href="mailto:fabricefbo9@gmail.com">fabricefbo9@gmail.com</a></p>
-                    <p>📸 Instagram : <a href="https://www.instagram.com/fbo_le_sheild/" target="_blank" class="social-link">@fbo_le_sheild</a></p>
-                </div>
-            </section>
-        </main>
-    
-        <footer>
-            <p>&copy; 2023 FBO SERVICE. Tous droits réservés.</p>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/fbo_le_sheild/" target="_blank" title="Instagram">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-                </a>
-                <a href="https://t.me/+nihcpKqkTVg4NmNk" target="_blank" title="Telegram">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-                </a>
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Suivez les Matchs en Ligne</h1>
+        <div class="promo-codes">
+            <div class="promo-code">200% de Bonus avec Code Promo 1xbet: FBO9</div>
+            <div class="promo-code">500% de Bonus avec Code Promo 1win: FBO9</div>
+        </div>
+        <p style="font-size: 0.8em; margin-top: 10px;">Jouez avec modération car les paris sportifs comportent des risques de perte.</p>
+    </header>
+    <main>
+        <h2 class="match-title">Matchs du 08/03/2025</h2>
+        <div id="match-list">
+            <div class="match-card">
+                <h2>Liverpool 🆚 Southampton</h2>
+                <p>15h00</p>
+                <a href="https://t.me/bannousg848?livestream" target="_blank">Suivre le Match (Lien 1)</a>
+                <a href="https://t.me/hunilive109?livestream" target="_blank" style="margin-top: 10px;">Suivre le Match (Lien 2)</a>
             </div>
-        </footer>
-    
-        <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            // Smooth scrolling
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-    
-            // Intersection Observer for fade-in effect
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in');
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-    
-            document.querySelectorAll('.project-card').forEach(card => {
-                observer.observe(card);
+            <div class="match-card">
+                <h2>Barcelone 🆚 Osassouna</h2>
+                <p>20h00</p>
+                <a href="https://t.me/+Xmj4PGOFQzozZmMx" target="_blank">Suivre le Match </a>
+            </div>
+             <div class="match-card">
+                <h2>PSG 🆚 Reims</h2>
+                <p>16h00</p>
+                <a href="https://t.me/bannousg849?livestream" target="_blank">Suivre le Match (Lien 1)</a>
+                <a href="https://t.me/hunilive109?livestream" target="_blank" style="margin-top: 10px;">Suivre le Match (Lien 2)</a>
+        </div>
+             <div class="match-card">
+                <h2>Lille 🆚 Monpelier</h2>
+                <p>18h00</p>
+                <a href="https://t.me/bannousg851?livestream" target="_blank">Suivre le Match </a>
+        </div>
+             <div class="match-card">
+                <h2>Marseille 🆚 Lens</h2>
+                <p>20h05</p>
+                <a href="https://t.me/bannousg852?livestream" target="_blank">Suivre le Match </a>
+        </div>
+     </div>
+    </main>
+    <footer>
+        <div class="note">
+            <p>Les heures indiquées sont en GMT. Les matchs sont diffusés sur Telegram.</p>
+            <p>Parfois, le son ne sort pas des fois sur les téléphones portables mais fonctionne correctement sur l'ordinateur.</p>
+            <p>Les liens sont renouvelés tous les jours. Une bonne connexion internet est nécessaire pour un visionnage optimal.</p>
+        </div>
+        <div class="made-by">Réalisé par Fbo</div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/fbo_le_sheild/" target="_blank" title="Instagram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://t.me/+nihcpKqkTVg4NmNk" target="_blank" title="Telegram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+            </a>
+        </div>
+    </footer>
+    <script>
+        // Animation pour les cartes de match
+        document.addEventListener('DOMContentLoaded', () => {
+            const matchCards = document.querySelectorAll('.match-card');
+            const title = document.querySelector('.match-title');
+
+            // Animation titre
+            setTimeout(() => {
+                title.style.opacity = 1;
+                title.style.transform = 'translateY(0)';
+            }, 200);
+
+            // Animation des cartes
+            matchCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = 1;
+                    card.style.transform = 'translateY(0)';
+                }, 300 * index);
             });
         });
-        </script>
+    </script>
+</body>
+</html>
